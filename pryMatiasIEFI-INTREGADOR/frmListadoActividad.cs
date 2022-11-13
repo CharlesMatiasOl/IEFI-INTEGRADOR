@@ -16,5 +16,10 @@ namespace pryMatiasIEFI_INTREGADOR
         {
             InitializeComponent();
         }
+
+        private void frmListadoActividad_Load(object sender, EventArgs e)
+        {
+
+        }
     }
 }

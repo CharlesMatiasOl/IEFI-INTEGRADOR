@@ -245,6 +245,7 @@
             this.Controls.Add(this.label1);
             this.Name = "frmListadoActividad";
             this.Text = "frmListadoActividad";
+            this.Load += new System.EventHandler(this.frmListadoActividad_Load);
             this.groupBox1.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.dgvListadoSucursales)).EndInit();
             this.ResumeLayout(false);

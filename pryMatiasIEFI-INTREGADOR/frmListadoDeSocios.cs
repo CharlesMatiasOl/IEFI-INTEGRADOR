@@ -16,5 +16,19 @@ namespace pryMatiasIEFI_INTREGADOR
         {
             InitializeComponent();
         }
+
+        private void btnListar_Click(object sender, EventArgs e)
+        {
+            clsSocio objCliente = new clsSocio();
+            objCliente.ListarSocios(dgvGrilla);
+            lblTotalSueldos.Text = objCliente.TotalSaldo.ToString();
+            lblPersonasInscr.Text = objCliente.cantidadSocios.ToString();
+            lblPromedioSaldos.Text = objCliente.promedioSaldo.ToString();
+        }
+
+        private void frmListadoDeSocios_Load(object sender, EventArgs e)
+        {
+
+        }
     }
 }

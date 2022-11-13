@@ -102,6 +102,8 @@
             // lstActividadesSucursales
             // 
             this.lstActividadesSucursales.FormattingEnabled = true;
+            this.lstActividadesSucursales.Items.AddRange(new object[] {
+            "Cordoba"});
             this.lstActividadesSucursales.Location = new System.Drawing.Point(153, 12);
             this.lstActividadesSucursales.Name = "lstActividadesSucursales";
             this.lstActividadesSucursales.Size = new System.Drawing.Size(221, 21);

@@ -32,7 +32,7 @@
             this.grpConsultaDatos = new System.Windows.Forms.GroupBox();
             this.lblPromedioSaldos = new System.Windows.Forms.Label();
             this.lblTotalSueldos = new System.Windows.Forms.Label();
-            this.cmdListar = new System.Windows.Forms.Button();
+            this.btnListar = new System.Windows.Forms.Button();
             this.lblPersonasInscr = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
@@ -57,7 +57,7 @@
             // 
             this.grpConsultaDatos.Controls.Add(this.lblPromedioSaldos);
             this.grpConsultaDatos.Controls.Add(this.lblTotalSueldos);
-            this.grpConsultaDatos.Controls.Add(this.cmdListar);
+            this.grpConsultaDatos.Controls.Add(this.btnListar);
             this.grpConsultaDatos.Controls.Add(this.lblPersonasInscr);
             this.grpConsultaDatos.Controls.Add(this.label3);
             this.grpConsultaDatos.Controls.Add(this.label2);
@@ -89,15 +89,16 @@
             this.lblTotalSueldos.Size = new System.Drawing.Size(260, 32);
             this.lblTotalSueldos.TabIndex = 10;
             // 
-            // cmdListar
+            // btnListar
             // 
-            this.cmdListar.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.cmdListar.Location = new System.Drawing.Point(441, 355);
-            this.cmdListar.Name = "cmdListar";
-            this.cmdListar.Size = new System.Drawing.Size(76, 28);
-            this.cmdListar.TabIndex = 9;
-            this.cmdListar.Text = "Listar";
-            this.cmdListar.UseVisualStyleBackColor = true;
+            this.btnListar.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnListar.Location = new System.Drawing.Point(441, 355);
+            this.btnListar.Name = "btnListar";
+            this.btnListar.Size = new System.Drawing.Size(76, 28);
+            this.btnListar.TabIndex = 9;
+            this.btnListar.Text = "Listar";
+            this.btnListar.UseVisualStyleBackColor = true;
+            this.btnListar.Click += new System.EventHandler(this.btnListar_Click);
             // 
             // lblPersonasInscr
             // 
@@ -181,6 +182,7 @@
             this.Controls.Add(this.grpConsultaDatos);
             this.Name = "frmListadoDeSocios";
             this.Text = "frmListadoDeSocios";
+            this.Load += new System.EventHandler(this.frmListadoDeSocios_Load);
             this.grpConsultaDatos.ResumeLayout(false);
             this.grpConsultaDatos.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgvGrilla)).EndInit();
@@ -195,7 +197,7 @@
         private System.Windows.Forms.GroupBox grpConsultaDatos;
         private System.Windows.Forms.Label lblPromedioSaldos;
         private System.Windows.Forms.Label lblTotalSueldos;
-        private System.Windows.Forms.Button cmdListar;
+        private System.Windows.Forms.Button btnListar;
         private System.Windows.Forms.Label lblPersonasInscr;
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.Label label2;

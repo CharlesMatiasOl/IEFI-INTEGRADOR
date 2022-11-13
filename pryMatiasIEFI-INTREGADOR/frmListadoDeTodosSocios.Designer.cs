@@ -28,20 +28,21 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.cmdListar = new System.Windows.Forms.Button();
+            this.btnListar = new System.Windows.Forms.Button();
             this.dgvListadoSocios = new System.Windows.Forms.DataGridView();
             ((System.ComponentModel.ISupportInitialize)(this.dgvListadoSocios)).BeginInit();
             this.SuspendLayout();
             // 
-            // cmdListar
+            // btnListar
             // 
-            this.cmdListar.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.cmdListar.Location = new System.Drawing.Point(370, 382);
-            this.cmdListar.Name = "cmdListar";
-            this.cmdListar.Size = new System.Drawing.Size(103, 23);
-            this.cmdListar.TabIndex = 3;
-            this.cmdListar.Text = "Listar";
-            this.cmdListar.UseVisualStyleBackColor = true;
+            this.btnListar.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnListar.Location = new System.Drawing.Point(370, 382);
+            this.btnListar.Name = "btnListar";
+            this.btnListar.Size = new System.Drawing.Size(103, 23);
+            this.btnListar.TabIndex = 3;
+            this.btnListar.Text = "Listar";
+            this.btnListar.UseVisualStyleBackColor = true;
+            this.btnListar.Click += new System.EventHandler(this.btnListar_Click);
             // 
             // dgvListadoSocios
             // 
@@ -57,10 +58,11 @@
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(483, 415);
-            this.Controls.Add(this.cmdListar);
+            this.Controls.Add(this.btnListar);
             this.Controls.Add(this.dgvListadoSocios);
             this.Name = "frmListadoDeTodosSocios";
             this.Text = "frmListadoDeTodosSocios";
+            this.Load += new System.EventHandler(this.frmListadoDeTodosSocios_Load);
             ((System.ComponentModel.ISupportInitialize)(this.dgvListadoSocios)).EndInit();
             this.ResumeLayout(false);
 
@@ -68,7 +70,7 @@
 
         #endregion
 
-        private System.Windows.Forms.Button cmdListar;
+        private System.Windows.Forms.Button btnListar;
         private System.Windows.Forms.DataGridView dgvListadoSocios;
     }
 }

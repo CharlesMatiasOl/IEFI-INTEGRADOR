@@ -16,5 +16,16 @@ namespace pryMatiasIEFI_INTREGADOR
         {
             InitializeComponent();
         }
+
+        private void frmListadoDeTodosSocios_Load(object sender, EventArgs e)
+        {
+
+        }
+
+        private void btnListar_Click(object sender, EventArgs e)
+        {
+            clsSocio listar = new clsSocio();
+            listar.Listar(dgvListadoSocios);
+        }
     }
 }
