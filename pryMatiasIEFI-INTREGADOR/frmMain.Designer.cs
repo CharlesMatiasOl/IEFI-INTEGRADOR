@@ -31,15 +31,15 @@
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frmMain));
             this.menuStrip1 = new System.Windows.Forms.MenuStrip();
             this.consultaToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.salirToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.salirToolStripMenuItem1 = new System.Windows.Forms.ToolStripMenuItem();
             this.agregarNuevosClientesToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.pictureBox1 = new System.Windows.Forms.PictureBox();
+            this.salirToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.buscarSocioToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.consultaSocioToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.consultaTodosSociosToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.consultaSocioPorSucursalToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.consultaPorActividadToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.salirToolStripMenuItem1 = new System.Windows.Forms.ToolStripMenuItem();
+            this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.menuStrip1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
@@ -64,6 +64,13 @@
             this.consultaToolStripMenuItem.Size = new System.Drawing.Size(62, 20);
             this.consultaToolStripMenuItem.Text = "Registro";
             // 
+            // agregarNuevosClientesToolStripMenuItem
+            // 
+            this.agregarNuevosClientesToolStripMenuItem.Name = "agregarNuevosClientesToolStripMenuItem";
+            this.agregarNuevosClientesToolStripMenuItem.Size = new System.Drawing.Size(200, 22);
+            this.agregarNuevosClientesToolStripMenuItem.Text = "Agregar nuevos clientes";
+            this.agregarNuevosClientesToolStripMenuItem.Click += new System.EventHandler(this.agregarNuevosClientesToolStripMenuItem_Click);
+            // 
             // salirToolStripMenuItem
             // 
             this.salirToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
@@ -76,35 +83,10 @@
             this.salirToolStripMenuItem.Size = new System.Drawing.Size(66, 20);
             this.salirToolStripMenuItem.Text = "Consulta";
             // 
-            // salirToolStripMenuItem1
-            // 
-            this.salirToolStripMenuItem1.Name = "salirToolStripMenuItem1";
-            this.salirToolStripMenuItem1.Size = new System.Drawing.Size(41, 20);
-            this.salirToolStripMenuItem1.Text = "Salir";
-            this.salirToolStripMenuItem1.Click += new System.EventHandler(this.salirToolStripMenuItem1_Click);
-            // 
-            // agregarNuevosClientesToolStripMenuItem
-            // 
-            this.agregarNuevosClientesToolStripMenuItem.Name = "agregarNuevosClientesToolStripMenuItem";
-            this.agregarNuevosClientesToolStripMenuItem.Size = new System.Drawing.Size(200, 22);
-            this.agregarNuevosClientesToolStripMenuItem.Text = "Agregar nuevos clientes";
-            this.agregarNuevosClientesToolStripMenuItem.Click += new System.EventHandler(this.agregarNuevosClientesToolStripMenuItem_Click);
-            // 
-            // pictureBox1
-            // 
-            this.pictureBox1.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.pictureBox1.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox1.Image")));
-            this.pictureBox1.Location = new System.Drawing.Point(0, 24);
-            this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(337, 219);
-            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.pictureBox1.TabIndex = 1;
-            this.pictureBox1.TabStop = false;
-            // 
             // buscarSocioToolStripMenuItem
             // 
             this.buscarSocioToolStripMenuItem.Name = "buscarSocioToolStripMenuItem";
-            this.buscarSocioToolStripMenuItem.Size = new System.Drawing.Size(193, 22);
+            this.buscarSocioToolStripMenuItem.Size = new System.Drawing.Size(197, 22);
             this.buscarSocioToolStripMenuItem.Text = "Buscar socio";
             this.buscarSocioToolStripMenuItem.Click += new System.EventHandler(this.buscarSocioToolStripMenuItem_Click);
             // 
@@ -136,6 +118,24 @@
             this.consultaPorActividadToolStripMenuItem.Text = "Consultar por actividad";
             this.consultaPorActividadToolStripMenuItem.Click += new System.EventHandler(this.consultaPorActividadToolStripMenuItem_Click);
             // 
+            // salirToolStripMenuItem1
+            // 
+            this.salirToolStripMenuItem1.Name = "salirToolStripMenuItem1";
+            this.salirToolStripMenuItem1.Size = new System.Drawing.Size(41, 20);
+            this.salirToolStripMenuItem1.Text = "Salir";
+            this.salirToolStripMenuItem1.Click += new System.EventHandler(this.salirToolStripMenuItem1_Click);
+            // 
+            // pictureBox1
+            // 
+            this.pictureBox1.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.pictureBox1.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox1.Image")));
+            this.pictureBox1.Location = new System.Drawing.Point(0, 24);
+            this.pictureBox1.Name = "pictureBox1";
+            this.pictureBox1.Size = new System.Drawing.Size(337, 219);
+            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.pictureBox1.TabIndex = 1;
+            this.pictureBox1.TabStop = false;
+            // 
             // frmMain
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -143,9 +143,10 @@
             this.ClientSize = new System.Drawing.Size(337, 243);
             this.Controls.Add(this.pictureBox1);
             this.Controls.Add(this.menuStrip1);
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.MainMenuStrip = this.menuStrip1;
             this.Name = "frmMain";
-            this.Text = "Form1";
+            this.Text = "Sistema";
             this.menuStrip1.ResumeLayout(false);
             this.menuStrip1.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();

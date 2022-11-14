@@ -151,7 +151,7 @@
             this.dgvGrilla.Location = new System.Drawing.Point(17, 19);
             this.dgvGrilla.Name = "dgvGrilla";
             this.dgvGrilla.ReadOnly = true;
-            this.dgvGrilla.Size = new System.Drawing.Size(494, 201);
+            this.dgvGrilla.Size = new System.Drawing.Size(490, 201);
             this.dgvGrilla.TabIndex = 0;
             // 
             // Column1

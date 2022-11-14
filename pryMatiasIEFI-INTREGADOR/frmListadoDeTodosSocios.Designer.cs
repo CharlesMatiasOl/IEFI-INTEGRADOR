@@ -36,7 +36,7 @@
             // btnListar
             // 
             this.btnListar.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnListar.Location = new System.Drawing.Point(370, 382);
+            this.btnListar.Location = new System.Drawing.Point(545, 284);
             this.btnListar.Name = "btnListar";
             this.btnListar.Size = new System.Drawing.Size(103, 23);
             this.btnListar.TabIndex = 3;
@@ -47,17 +47,17 @@
             // dgvListadoSocios
             // 
             this.dgvListadoSocios.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dgvListadoSocios.Location = new System.Drawing.Point(12, 12);
+            this.dgvListadoSocios.Location = new System.Drawing.Point(4, 12);
             this.dgvListadoSocios.Name = "dgvListadoSocios";
             this.dgvListadoSocios.ReadOnly = true;
-            this.dgvListadoSocios.Size = new System.Drawing.Size(461, 364);
+            this.dgvListadoSocios.Size = new System.Drawing.Size(644, 266);
             this.dgvListadoSocios.TabIndex = 2;
             // 
             // frmListadoDeTodosSocios
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(483, 415);
+            this.ClientSize = new System.Drawing.Size(652, 314);
             this.Controls.Add(this.btnListar);
             this.Controls.Add(this.dgvListadoSocios);
             this.Name = "frmListadoDeTodosSocios";
