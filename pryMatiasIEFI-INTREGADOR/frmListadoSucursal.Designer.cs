@@ -28,7 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.cmdListarSucursales = new System.Windows.Forms.Button();
+            this.btnListarSucursales = new System.Windows.Forms.Button();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
             this.dgvListadoSucursales = new System.Windows.Forms.DataGridView();
             this.Column1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
@@ -41,14 +41,15 @@
             ((System.ComponentModel.ISupportInitialize)(this.dgvListadoSucursales)).BeginInit();
             this.SuspendLayout();
             // 
-            // cmdListarSucursales
+            // btnListarSucursales
             // 
-            this.cmdListarSucursales.Location = new System.Drawing.Point(380, 10);
-            this.cmdListarSucursales.Name = "cmdListarSucursales";
-            this.cmdListarSucursales.Size = new System.Drawing.Size(75, 23);
-            this.cmdListarSucursales.TabIndex = 13;
-            this.cmdListarSucursales.Text = "Listar";
-            this.cmdListarSucursales.UseVisualStyleBackColor = true;
+            this.btnListarSucursales.Location = new System.Drawing.Point(380, 10);
+            this.btnListarSucursales.Name = "btnListarSucursales";
+            this.btnListarSucursales.Size = new System.Drawing.Size(75, 23);
+            this.btnListarSucursales.TabIndex = 13;
+            this.btnListarSucursales.Text = "Listar";
+            this.btnListarSucursales.UseVisualStyleBackColor = true;
+            this.btnListarSucursales.Click += new System.EventHandler(this.cmdListarSucursales_Click);
             // 
             // groupBox1
             // 
@@ -103,7 +104,14 @@
             // 
             this.lstActividadesSucursales.FormattingEnabled = true;
             this.lstActividadesSucursales.Items.AddRange(new object[] {
-            "Cordoba"});
+            "Nueva Cordoba",
+            "Alta Cordoba",
+            "Cerro las rosas",
+            "General Paz",
+            "Villa Allende",
+            "Centro",
+            "Unquillo",
+            "Cosquin"});
             this.lstActividadesSucursales.Location = new System.Drawing.Point(153, 12);
             this.lstActividadesSucursales.Name = "lstActividadesSucursales";
             this.lstActividadesSucursales.Size = new System.Drawing.Size(221, 21);
@@ -124,7 +132,7 @@
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(468, 216);
-            this.Controls.Add(this.cmdListarSucursales);
+            this.Controls.Add(this.btnListarSucursales);
             this.Controls.Add(this.groupBox1);
             this.Controls.Add(this.lstActividadesSucursales);
             this.Controls.Add(this.label1);
@@ -140,7 +148,7 @@
 
         #endregion
 
-        private System.Windows.Forms.Button cmdListarSucursales;
+        private System.Windows.Forms.Button btnListarSucursales;
         private System.Windows.Forms.GroupBox groupBox1;
         private System.Windows.Forms.DataGridView dgvListadoSucursales;
         private System.Windows.Forms.DataGridViewTextBoxColumn Column1;

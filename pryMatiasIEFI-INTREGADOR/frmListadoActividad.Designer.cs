@@ -38,7 +38,7 @@
             this.label2 = new System.Windows.Forms.Label();
             this.cmdImprimir = new System.Windows.Forms.Button();
             this.cmdExportar = new System.Windows.Forms.Button();
-            this.cmdListar = new System.Windows.Forms.Button();
+            this.btnListar = new System.Windows.Forms.Button();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
             this.dgvListadoSucursales = new System.Windows.Forms.DataGridView();
             this.Column1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
@@ -143,15 +143,16 @@
             this.cmdExportar.Text = "Exportar";
             this.cmdExportar.UseVisualStyleBackColor = true;
             // 
-            // cmdListar
+            // btnListar
             // 
-            this.cmdListar.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.cmdListar.Location = new System.Drawing.Point(11, 240);
-            this.cmdListar.Name = "cmdListar";
-            this.cmdListar.Size = new System.Drawing.Size(75, 23);
-            this.cmdListar.TabIndex = 17;
-            this.cmdListar.Text = "Listar";
-            this.cmdListar.UseVisualStyleBackColor = true;
+            this.btnListar.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnListar.Location = new System.Drawing.Point(11, 240);
+            this.btnListar.Name = "btnListar";
+            this.btnListar.Size = new System.Drawing.Size(75, 23);
+            this.btnListar.TabIndex = 17;
+            this.btnListar.Text = "Listar";
+            this.btnListar.UseVisualStyleBackColor = true;
+            this.btnListar.Click += new System.EventHandler(this.cmdListar_Click);
             // 
             // groupBox1
             // 
@@ -209,6 +210,14 @@
             this.lstActividades.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.lstActividades.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lstActividades.FormattingEnabled = true;
+            this.lstActividades.Items.AddRange(new object[] {
+            "Crossfit",
+            "Musculacion",
+            "Pilates",
+            "Funcional",
+            "Boxing",
+            "Zumba",
+            "Karate"});
             this.lstActividades.Location = new System.Drawing.Point(146, 6);
             this.lstActividades.Name = "lstActividades";
             this.lstActividades.Size = new System.Drawing.Size(143, 23);
@@ -239,7 +248,7 @@
             this.Controls.Add(this.label2);
             this.Controls.Add(this.cmdImprimir);
             this.Controls.Add(this.cmdExportar);
-            this.Controls.Add(this.cmdListar);
+            this.Controls.Add(this.btnListar);
             this.Controls.Add(this.groupBox1);
             this.Controls.Add(this.lstActividades);
             this.Controls.Add(this.label1);
@@ -265,7 +274,7 @@
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Button cmdImprimir;
         private System.Windows.Forms.Button cmdExportar;
-        private System.Windows.Forms.Button cmdListar;
+        private System.Windows.Forms.Button btnListar;
         private System.Windows.Forms.GroupBox groupBox1;
         private System.Windows.Forms.DataGridView dgvListadoSucursales;
         private System.Windows.Forms.DataGridViewTextBoxColumn Column1;

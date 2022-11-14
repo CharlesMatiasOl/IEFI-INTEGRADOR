@@ -19,7 +19,15 @@ namespace pryMatiasIEFI_INTREGADOR
 
         private void frmListadoSucursal_Load(object sender, EventArgs e)
         {
+            clsSucursales sucursales = new clsSucursales();
+            sucursales.ListarComboBox(lstActividadesSucursales);
+        }
 
+        private void cmdListarSucursales_Click(object sender, EventArgs e)
+        {
+            Int32 varFiltro = Convert.ToInt32(lstActividadesSucursales.SelectedValue);
+            clsSucursales filtro = new clsSucursales();
+            filtro.FiltrarClientesDeUnaSucursal(dgvListadoSucursales, varFiltro);
         }
     }
 }

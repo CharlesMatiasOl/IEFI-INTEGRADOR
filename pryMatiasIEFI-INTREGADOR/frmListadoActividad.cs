@@ -19,7 +19,16 @@ namespace pryMatiasIEFI_INTREGADOR
 
         private void frmListadoActividad_Load(object sender, EventArgs e)
         {
+            clsActividad actividad = new clsActividad();
+            actividad.ListarC(lstActividades);
+        }
 
+        private void cmdListar_Click(object sender, EventArgs e)
+        {
+            Int32 filtro = (Convert.ToInt32(lstActividades.SelectedValue));
+            clsSocio filtrar = new clsSocio();
+            lblSaldoTotal.Text = filtrar.TotalSaldo.ToString();
+            filtrar.FiltrarClientesDeUnaActividad(dgvListadoSucursales, filtro);
         }
     }
 }
