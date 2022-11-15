@@ -44,8 +44,6 @@ namespace pryMatiasIEFI_INTREGADOR
                 mskCodigoSucursal.Text = objCliente.CodigoSucursal.ToString();
                 mskSaldo.Text = objCliente.Saldo.ToString();
 
-
-
             }
             else
             {
@@ -67,7 +65,7 @@ namespace pryMatiasIEFI_INTREGADOR
             string nombre = txtNombre.Text;
             string direccion = txtDireccion.Text;
             Int32 codigoSuc = (Convert.ToInt32(mskCodigoSucursal.Text));
-            Int32 codigoAct = (Convert.ToInt32(txtNombreActividad.Text));
+            var codigoAct = (Convert.ToInt32(txtNombreActividad.Text));
             Int32 saldo = (Convert.ToInt32(mskSaldo.Text));
             clsSocio modificar = new clsSocio();
             modificar.Dni_Socio = dni;
