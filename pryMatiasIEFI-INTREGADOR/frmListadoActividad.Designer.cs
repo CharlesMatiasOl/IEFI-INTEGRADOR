@@ -40,7 +40,7 @@
             this.cmdExportar = new System.Windows.Forms.Button();
             this.btnListar = new System.Windows.Forms.Button();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
-            this.dgvListadoSucursales = new System.Windows.Forms.DataGridView();
+            this.dgvListadoActividad = new System.Windows.Forms.DataGridView();
             this.Column1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Column2 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Column3 = new System.Windows.Forms.DataGridViewTextBoxColumn();
@@ -48,7 +48,7 @@
             this.lstActividades = new System.Windows.Forms.ComboBox();
             this.label1 = new System.Windows.Forms.Label();
             this.groupBox1.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.dgvListadoSucursales)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dgvListadoActividad)).BeginInit();
             this.SuspendLayout();
             // 
             // lblSaldoTotal
@@ -156,7 +156,7 @@
             // 
             // groupBox1
             // 
-            this.groupBox1.Controls.Add(this.dgvListadoSucursales);
+            this.groupBox1.Controls.Add(this.dgvListadoActividad);
             this.groupBox1.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.groupBox1.Location = new System.Drawing.Point(11, 37);
             this.groupBox1.Name = "groupBox1";
@@ -165,19 +165,19 @@
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "Listado de clientes";
             // 
-            // dgvListadoSucursales
+            // dgvListadoActividad
             // 
-            this.dgvListadoSucursales.CellBorderStyle = System.Windows.Forms.DataGridViewCellBorderStyle.RaisedHorizontal;
-            this.dgvListadoSucursales.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dgvListadoSucursales.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
+            this.dgvListadoActividad.CellBorderStyle = System.Windows.Forms.DataGridViewCellBorderStyle.RaisedHorizontal;
+            this.dgvListadoActividad.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dgvListadoActividad.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.Column1,
             this.Column2,
             this.Column3,
             this.Column4});
-            this.dgvListadoSucursales.Location = new System.Drawing.Point(6, 20);
-            this.dgvListadoSucursales.Name = "dgvListadoSucursales";
-            this.dgvListadoSucursales.Size = new System.Drawing.Size(537, 150);
-            this.dgvListadoSucursales.TabIndex = 0;
+            this.dgvListadoActividad.Location = new System.Drawing.Point(6, 20);
+            this.dgvListadoActividad.Name = "dgvListadoActividad";
+            this.dgvListadoActividad.Size = new System.Drawing.Size(537, 150);
+            this.dgvListadoActividad.TabIndex = 0;
             // 
             // Column1
             // 
@@ -256,7 +256,7 @@
             this.Text = "frmListadoActividad";
             this.Load += new System.EventHandler(this.frmListadoActividad_Load);
             this.groupBox1.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)(this.dgvListadoSucursales)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dgvListadoActividad)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -276,7 +276,7 @@
         private System.Windows.Forms.Button cmdExportar;
         private System.Windows.Forms.Button btnListar;
         private System.Windows.Forms.GroupBox groupBox1;
-        private System.Windows.Forms.DataGridView dgvListadoSucursales;
+        private System.Windows.Forms.DataGridView dgvListadoActividad;
         private System.Windows.Forms.DataGridViewTextBoxColumn Column1;
         private System.Windows.Forms.DataGridViewTextBoxColumn Column2;
         private System.Windows.Forms.DataGridViewTextBoxColumn Column3;
