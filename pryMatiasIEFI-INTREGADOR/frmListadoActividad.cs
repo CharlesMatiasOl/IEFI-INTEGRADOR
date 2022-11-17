@@ -27,7 +27,7 @@ namespace pryMatiasIEFI_INTREGADOR
         {
             Int32 filtro = (Convert.ToInt32(lstActividades.SelectedValue));
             clsSocio filtrar = new clsSocio();
-            lblSaldoTotal.Text = filtrar.TotalSaldo.ToString();
+            //lblSaldoTotal.Text = filtrar.TotalSaldo.ToString();
             filtrar.FiltrarClientesDeUnaActividad(dgvListadoActividad, filtro);
         }
     }
