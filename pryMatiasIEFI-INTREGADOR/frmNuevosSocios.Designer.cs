@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frmNuevosSocios));
             this.gpNuevosocio = new System.Windows.Forms.GroupBox();
             this.btnAgregarCliente = new System.Windows.Forms.Button();
             this.mskSaldo = new System.Windows.Forms.MaskedTextBox();
@@ -198,6 +199,7 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(387, 292);
             this.Controls.Add(this.gpNuevosocio);
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "frmNuevosSocios";
             this.Text = "frmNuevosSocios";
             this.Load += new System.EventHandler(this.frmNuevosSocios_Load);

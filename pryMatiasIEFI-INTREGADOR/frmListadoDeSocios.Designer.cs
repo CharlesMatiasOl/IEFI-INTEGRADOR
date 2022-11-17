@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frmListadoDeSocios));
             this.statusStrip1 = new System.Windows.Forms.StatusStrip();
             this.grpConsultaDatos = new System.Windows.Forms.GroupBox();
             this.lblPromedioSaldos = new System.Windows.Forms.Label();
@@ -180,6 +181,7 @@
             this.ClientSize = new System.Drawing.Size(546, 426);
             this.Controls.Add(this.statusStrip1);
             this.Controls.Add(this.grpConsultaDatos);
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "frmListadoDeSocios";
             this.Text = "frmListadoDeSocios";
             this.Load += new System.EventHandler(this.frmListadoDeSocios_Load);

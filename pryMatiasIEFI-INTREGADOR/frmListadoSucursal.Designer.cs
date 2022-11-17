@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frmListadoSucursal));
             this.btnListarSucursales = new System.Windows.Forms.Button();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
             this.dgvListadoSucursales = new System.Windows.Forms.DataGridView();
@@ -136,6 +137,7 @@
             this.Controls.Add(this.groupBox1);
             this.Controls.Add(this.lstActividadesSucursales);
             this.Controls.Add(this.label1);
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "frmListadoSucursal";
             this.Text = "frmListadoSucursal";
             this.Load += new System.EventHandler(this.frmListadoSucursal_Load);

@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frmListadoDeTodosSocios));
             this.btnListar = new System.Windows.Forms.Button();
             this.dgvListadoSocios = new System.Windows.Forms.DataGridView();
             ((System.ComponentModel.ISupportInitialize)(this.dgvListadoSocios)).BeginInit();
@@ -60,6 +61,7 @@
             this.ClientSize = new System.Drawing.Size(652, 314);
             this.Controls.Add(this.btnListar);
             this.Controls.Add(this.dgvListadoSocios);
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "frmListadoDeTodosSocios";
             this.Text = "frmListadoDeTodosSocios";
             this.Load += new System.EventHandler(this.frmListadoDeTodosSocios_Load);

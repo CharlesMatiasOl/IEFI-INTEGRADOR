@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frmBuscarSocio));
             this.btnModificar = new System.Windows.Forms.Button();
             this.btnEliminar = new System.Windows.Forms.Button();
             this.btnBuscar = new System.Windows.Forms.Button();
@@ -295,6 +296,7 @@
             this.Controls.Add(this.grpDatosClientes);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.btnBuscar);
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "frmBuscarSocio";
             this.Text = "BuscarSocio";
             this.Load += new System.EventHandler(this.frmBuscarSocio_Load);
