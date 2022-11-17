@@ -40,7 +40,7 @@ namespace pryMatiasIEFI_INTREGADOR
                 mskDni.Text = objCliente.Dni_Socio.ToString();
                 txtDireccion.Text = objCliente.Direccion;
                 ObjActividad.BuscarActivid(objCliente.CodigoActividad);
-                txtNombreActividad.Text = ObjActividad.NombreActividad;
+                txtCodigoActividad.Text = ObjActividad.NombreActividad;
                 mskCodigoSucursal.Text = objCliente.CodigoSucursal.ToString();
                 mskSaldo.Text = objCliente.Saldo.ToString();
 
@@ -61,20 +61,32 @@ namespace pryMatiasIEFI_INTREGADOR
 
         private void btnModificar_Click(object sender, EventArgs e)
         {
-            Int32 dni = (Convert.ToInt32(mskDni.Text));
-            string nombre = txtNombre.Text;
-            string direccion = txtDireccion.Text;
-            Int32 codigoSuc = (Convert.ToInt32(mskCodigoSucursal.Text));
-            var codigoAct = (Convert.ToInt32(txtNombreActividad.Text));
-            Int32 saldo = (Convert.ToInt32(mskSaldo.Text));
-            clsSocio modificar = new clsSocio();
-            modificar.Dni_Socio = dni;
-            modificar.Nombre_Apellido = nombre;
-            modificar.Direccion = direccion;
-            modificar.CodigoSucursal = codigoSuc;
-            modificar.CodigoActividad = codigoAct;
-            modificar.Saldo = saldo;
-            modificar.ModificarSocios(dni);
+            try
+            {
+                Int32 dni = (Convert.ToInt32(mskDni.Text));
+                string nombre = txtNombre.Text;
+                string direccion = txtDireccion.Text;
+                Int32 codigoSuc = (Convert.ToInt32(mskCodigoSucursal.Text));
+                int codigoAct = Convert.ToInt32(txtCodigoActividad.Text);
+                Int32 saldo = (Convert.ToInt32(mskSaldo.Text));
+                clsSocio modificar = new clsSocio();
+                modificar.Dni_Socio = dni;
+                modificar.Nombre_Apellido = nombre;
+                modificar.Direccion = direccion;
+                modificar.CodigoSucursal = codigoSuc;
+                modificar.CodigoActividad = codigoAct;
+                modificar.Saldo = saldo;
+                modificar.ModificarSocios(dni);
+
+            }
+            catch
+            {
+                MessageBox.Show("Asegurese de ingresar valores numéricos en el campo de actividad.", "Error de Carga", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
+            }
+            
+
+
+
         }
 
         private void cmdBuscar_Click(object sender, EventArgs e)

@@ -238,7 +238,7 @@ namespace pryMatiasIEFI_INTREGADOR
                     "[Nombre_Apellido] = '" + Nombre_Apellido + "', " +
                     "[Direccion] = '" + Direccion + "', " +
                     "[Codigo_Sucursal] = " + CodigoSucursal + " , " +
-                    "[Codigo_Actividad] = " + CodigoActividad + " ," +
+                    "[Codigo_Actividad] = " + CodigoActividad + " , " +
                     "[Saldo] = " + Saldo + " WHERE [Dni_Socio] = " + Dni_Socio;
 
 
