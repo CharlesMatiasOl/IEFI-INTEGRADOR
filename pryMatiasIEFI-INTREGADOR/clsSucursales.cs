@@ -12,9 +12,8 @@ namespace pryMatiasIEFI_INTREGADOR
     internal class clsSucursales
     {
         private OleDbConnection conexion = new OleDbConnection();
-        private OleDbCommand comando = new OleDbCommand();//enviamos ordenes a las bases de dapto
-        private OleDbDataAdapter adaptador = new OleDbDataAdapter();//adpatamos los datos que estan en la base a datos comprensibles por .NET
-
+        private OleDbCommand comando = new OleDbCommand();//enviamos ordenes a las bases de dato
+        private OleDbDataAdapter adaptador = new OleDbDataAdapter();//adpatamos los datos en la base a datos para.NET
         private string cadenaConexion = "Provider=Microsoft.ACE.OLEDB.12.0;Data Source=IEFIBD.mdb";
         private string tabla = "Sucursales";
 
@@ -24,7 +23,7 @@ namespace pryMatiasIEFI_INTREGADOR
             {
                 conexion.ConnectionString = cadenaConexion;//cadena de conexion
                 conexion.Open();
-                comando.Connection = conexion; //el comando necesita tener una conexion
+                comando.Connection = conexion; 
                 comando.CommandType = CommandType.TableDirect; //nos trae una tabla
                 comando.CommandText = tabla;
                 adaptador = new OleDbDataAdapter(comando);

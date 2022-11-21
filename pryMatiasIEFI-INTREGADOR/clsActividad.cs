@@ -12,8 +12,8 @@ namespace pryMatiasIEFI_INTREGADOR
     internal class clsActividad
     {
         private OleDbConnection conexion = new OleDbConnection();
-        private OleDbCommand comando = new OleDbCommand();//enviamos ordenes a las bases de dapto
-        private OleDbDataAdapter adaptador = new OleDbDataAdapter();//adpatamos los datos que estan en la base a datos comprensibles por .NET
+        private OleDbCommand comando = new OleDbCommand();//enviamos ordenes a las bases de dato
+        private OleDbDataAdapter adaptador = new OleDbDataAdapter();//adpatamos los datos en la base a datos por .NET
         private OleDbDataReader Lectora;
         public string NombreActividad;
         private string cadenaConexion = "Provider=Microsoft.ACE.OLEDB.12.0;Data Source=IEFIBD.mdb";
@@ -25,11 +25,9 @@ namespace pryMatiasIEFI_INTREGADOR
             {
                 conexion.ConnectionString = cadenaConexion;//cadena de conexion
                 conexion.Open();
-
                 comando.Connection = conexion; //el comando necesita tener una conexion
                 comando.CommandType = CommandType.TableDirect; //nos trae una tabla
                 comando.CommandText = tabla;
-
                 adaptador = new OleDbDataAdapter(comando);
                 DataSet DS = new DataSet();//tabla en memoria ram que tiene datos de mi tabla
                 adaptador.Fill(DS);
@@ -51,8 +49,8 @@ namespace pryMatiasIEFI_INTREGADOR
             {
                 conexion.ConnectionString = cadenaConexion;//cadena de conexion
                 conexion.Open();
-                comando.Connection = conexion; //el comando necesita tener una conexion
-                comando.CommandType = CommandType.TableDirect; //nos trae una tabla
+                comando.Connection = conexion; 
+                comando.CommandType = CommandType.TableDirect; 
                 comando.CommandText = tabla;
                 adaptador = new OleDbDataAdapter(comando);
                 DataSet DS = new DataSet();//tabla en memoria ram que tiene datos de mi tabla
@@ -78,18 +76,12 @@ namespace pryMatiasIEFI_INTREGADOR
             try
             {
                 //Conecto con la base de datos
-                conexion.ConnectionString = cadenaConexion;
-                //Abro Conexion
-                conexion.Open();
-                //Indico cual es la conexion que voy a utilizar
-                comando.Connection = conexion;
-                //Indico que voy a trabajar directamente con table
-                comando.CommandType = CommandType.Text;
-                //Indico Nombre de la tabla a travez de la variable tabla creada en la 
-                comando.CommandText = "SELECT * FROM Actividad WHERE Codigo_Actividad =" + codigo;
-                //Elemento que me permite convertir los datos que se encuentran en la base de datos a un conjunto de valores que entienda .NET
-                //le paso a adaptador el comando (quequierodelabase)
-                Lectora = comando.ExecuteReader();
+                conexion.ConnectionString = cadenaConexion;               
+                conexion.Open();               
+                comando.Connection = conexion;               
+                comando.CommandType = CommandType.Text;//Indico que voy a trabajar directamente con table               
+                comando.CommandText = "SELECT * FROM Actividad WHERE Codigo_Actividad =" + codigo;//Indico Nombre de la tabla a travez de la variable tabla creada                             
+                Lectora = comando.ExecuteReader();//le paso a adaptador el comando (quequierodelabase)
 
                 while (Lectora.Read())
                 {

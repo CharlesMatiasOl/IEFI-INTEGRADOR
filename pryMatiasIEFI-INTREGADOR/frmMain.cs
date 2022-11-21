@@ -57,5 +57,10 @@ namespace pryMatiasIEFI_INTREGADOR
             frmListadoActividad objVentana = new frmListadoActividad();
             objVentana.ShowDialog();
         }
+
+        private void frmMain_Load(object sender, EventArgs e)
+        {
+
+        }
     }
 }
