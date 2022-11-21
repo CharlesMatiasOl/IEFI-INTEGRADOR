@@ -19,17 +19,18 @@ namespace pryMatiasIEFI_INTREGADOR
         private string cadenaConexion = "Provider=Microsoft.ACE.OLEDB.12.0;Data Source=IEFIBD.mdb";
         private string tabla = "Actividad";
 
+        // Funciones 
         public void Listar(DataGridView dgvGrilla)
         {
             try
             {
                 conexion.ConnectionString = cadenaConexion;//cadena de conexion
                 conexion.Open();
-                comando.Connection = conexion; //el comando necesita tener una conexion
-                comando.CommandType = CommandType.TableDirect; //nos trae una tabla
+                comando.Connection = conexion; 
+                comando.CommandType = CommandType.TableDirect; // trae una tabla
                 comando.CommandText = tabla;
                 adaptador = new OleDbDataAdapter(comando);
-                DataSet DS = new DataSet();//tabla en memoria ram que tiene datos de mi tabla
+                DataSet DS = new DataSet();//tabla en memoria ram 
                 adaptador.Fill(DS);
                 dgvGrilla.DataSource = DS.Tables[0];
                 conexion.Close();
@@ -53,11 +54,11 @@ namespace pryMatiasIEFI_INTREGADOR
                 comando.CommandType = CommandType.TableDirect; 
                 comando.CommandText = tabla;
                 adaptador = new OleDbDataAdapter(comando);
-                DataSet DS = new DataSet();//tabla en memoria ram que tiene datos de mi tabla
+                DataSet DS = new DataSet();//tabla en memoria ram 
                 adaptador.Fill(DS, tabla);
                 combo.DataSource = DS.Tables[tabla];
                 combo.DisplayMember = "Detalle_Actividad";//es lo que va aparecer en la lista desplegable
-                combo.ValueMember = "Codigo_Actividad";//esta invisible, pero esta
+                combo.ValueMember = "Codigo_Actividad";
 
 
                 conexion.Close();
@@ -79,9 +80,9 @@ namespace pryMatiasIEFI_INTREGADOR
                 conexion.ConnectionString = cadenaConexion;               
                 conexion.Open();               
                 comando.Connection = conexion;               
-                comando.CommandType = CommandType.Text;//Indico que voy a trabajar directamente con table               
+                comando.CommandType = CommandType.Text;             
                 comando.CommandText = "SELECT * FROM Actividad WHERE Codigo_Actividad =" + codigo;//Indico Nombre de la tabla a travez de la variable tabla creada                             
-                Lectora = comando.ExecuteReader();//le paso a adaptador el comando (quequierodelabase)
+                Lectora = comando.ExecuteReader();//le paso a adaptador el comando 
 
                 while (Lectora.Read())
                 {

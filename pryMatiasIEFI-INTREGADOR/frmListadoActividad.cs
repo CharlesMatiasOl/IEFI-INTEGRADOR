@@ -19,7 +19,7 @@ namespace pryMatiasIEFI_INTREGADOR
 
         private void frmListadoActividad_Load(object sender, EventArgs e)
         {
-            clsActividad actividad = new clsActividad();
+            clsActividad actividad = new clsActividad(); // Variable
             actividad.ListarC(lstActividades);
         }
 
@@ -29,5 +29,7 @@ namespace pryMatiasIEFI_INTREGADOR
             clsSocio filtrar = new clsSocio();
             filtrar.FiltrarClientesDeUnaActividad(dgvListadoActividad, filtro);
         }
+
+       
     }
 }

@@ -29,8 +29,6 @@
         private void InitializeComponent()
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frmListadoActividad));
-            this.cmdImprimir = new System.Windows.Forms.Button();
-            this.cmdExportar = new System.Windows.Forms.Button();
             this.btnListar = new System.Windows.Forms.Button();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
             this.dgvListadoActividad = new System.Windows.Forms.DataGridView();
@@ -43,26 +41,6 @@
             this.groupBox1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgvListadoActividad)).BeginInit();
             this.SuspendLayout();
-            // 
-            // cmdImprimir
-            // 
-            this.cmdImprimir.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.cmdImprimir.Location = new System.Drawing.Point(392, 6);
-            this.cmdImprimir.Name = "cmdImprimir";
-            this.cmdImprimir.Size = new System.Drawing.Size(75, 27);
-            this.cmdImprimir.TabIndex = 19;
-            this.cmdImprimir.Text = "Imprimir";
-            this.cmdImprimir.UseVisualStyleBackColor = true;
-            // 
-            // cmdExportar
-            // 
-            this.cmdExportar.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.cmdExportar.Location = new System.Drawing.Point(473, 6);
-            this.cmdExportar.Name = "cmdExportar";
-            this.cmdExportar.Size = new System.Drawing.Size(75, 27);
-            this.cmdExportar.TabIndex = 18;
-            this.cmdExportar.Text = "Exportar";
-            this.cmdExportar.UseVisualStyleBackColor = true;
             // 
             // btnListar
             // 
@@ -159,15 +137,13 @@
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(562, 302);
-            this.Controls.Add(this.cmdImprimir);
-            this.Controls.Add(this.cmdExportar);
             this.Controls.Add(this.btnListar);
             this.Controls.Add(this.groupBox1);
             this.Controls.Add(this.lstActividades);
             this.Controls.Add(this.label1);
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "frmListadoActividad";
-            this.Text = "frmListadoActividad";
+            this.Text = "Listado por actividad";
             this.Load += new System.EventHandler(this.frmListadoActividad_Load);
             this.groupBox1.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.dgvListadoActividad)).EndInit();
@@ -177,8 +153,6 @@
         }
 
         #endregion
-        private System.Windows.Forms.Button cmdImprimir;
-        private System.Windows.Forms.Button cmdExportar;
         private System.Windows.Forms.Button btnListar;
         private System.Windows.Forms.GroupBox groupBox1;
         private System.Windows.Forms.DataGridView dgvListadoActividad;

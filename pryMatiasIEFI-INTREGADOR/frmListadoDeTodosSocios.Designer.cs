@@ -63,7 +63,7 @@
             this.Controls.Add(this.dgvListadoSocios);
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "frmListadoDeTodosSocios";
-            this.Text = "frmListadoDeTodosSocios";
+            this.Text = "Listado de todos socios";
             this.Load += new System.EventHandler(this.frmListadoDeTodosSocios_Load);
             ((System.ComponentModel.ISupportInitialize)(this.dgvListadoSocios)).EndInit();
             this.ResumeLayout(false);

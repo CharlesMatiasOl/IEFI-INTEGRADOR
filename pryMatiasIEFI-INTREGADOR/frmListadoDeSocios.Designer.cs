@@ -183,7 +183,7 @@
             this.Controls.Add(this.grpConsultaDatos);
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "frmListadoDeSocios";
-            this.Text = "frmListadoDeSocios";
+            this.Text = "Listado de socios";
             this.Load += new System.EventHandler(this.frmListadoDeSocios_Load);
             this.grpConsultaDatos.ResumeLayout(false);
             this.grpConsultaDatos.PerformLayout();

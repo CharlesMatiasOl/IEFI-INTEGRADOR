@@ -71,7 +71,7 @@
             // 
             // btnAgregarCliente
             // 
-            this.btnAgregarCliente.Location = new System.Drawing.Point(278, 238);
+            this.btnAgregarCliente.Location = new System.Drawing.Point(272, 238);
             this.btnAgregarCliente.Name = "btnAgregarCliente";
             this.btnAgregarCliente.Size = new System.Drawing.Size(88, 25);
             this.btnAgregarCliente.TabIndex = 24;
@@ -207,7 +207,7 @@
             this.Controls.Add(this.gpNuevosocio);
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "frmNuevosSocios";
-            this.Text = "frmNuevosSocios";
+            this.Text = "Agregar Socio";
             this.Load += new System.EventHandler(this.frmNuevosSocios_Load);
             this.gpNuevosocio.ResumeLayout(false);
             this.gpNuevosocio.PerformLayout();

@@ -25,17 +25,16 @@ namespace pryMatiasIEFI_INTREGADOR
 
         private void btnBuscar_Click(object sender, EventArgs e)
         {
+
             Int32 DniCliente = Convert.ToInt32(txtDni.Text);
             clsSocio objCliente = new clsSocio();
-
             objCliente.Buscar(DniCliente);
 
-            if (DniCliente != 0)
+            if (DniCliente !=0)
             {
-                //le damos valor a las cajas de texto
+                
                 lblNombre.Text = objCliente.Nombre_Apellido;
                 lblSaldo.Text = objCliente.Saldo.ToString();
-
                 txtNombre.Text = objCliente.Nombre_Apellido;
                 mskDni.Text = objCliente.Dni_Socio.ToString();
                 txtDireccion.Text = objCliente.Direccion;
@@ -49,6 +48,7 @@ namespace pryMatiasIEFI_INTREGADOR
             {
                 MessageBox.Show("Dni no encontrado");
             }
+
         }
 
         private void btnEliminar_Click(object sender, EventArgs e)

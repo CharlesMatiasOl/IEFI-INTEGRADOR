@@ -59,9 +59,9 @@
             // btnModificar
             // 
             this.btnModificar.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnModificar.Location = new System.Drawing.Point(217, 248);
+            this.btnModificar.Location = new System.Drawing.Point(164, 303);
             this.btnModificar.Name = "btnModificar";
-            this.btnModificar.Size = new System.Drawing.Size(75, 23);
+            this.btnModificar.Size = new System.Drawing.Size(75, 26);
             this.btnModificar.TabIndex = 19;
             this.btnModificar.Text = "Modificar";
             this.btnModificar.UseVisualStyleBackColor = true;
@@ -70,9 +70,9 @@
             // btnEliminar
             // 
             this.btnEliminar.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnEliminar.Location = new System.Drawing.Point(217, 105);
+            this.btnEliminar.Location = new System.Drawing.Point(248, 303);
             this.btnEliminar.Name = "btnEliminar";
-            this.btnEliminar.Size = new System.Drawing.Size(75, 23);
+            this.btnEliminar.Size = new System.Drawing.Size(75, 26);
             this.btnEliminar.TabIndex = 20;
             this.btnEliminar.Text = "Eliminar";
             this.btnEliminar.UseVisualStyleBackColor = true;
@@ -81,7 +81,7 @@
             // btnBuscar
             // 
             this.btnBuscar.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnBuscar.Location = new System.Drawing.Point(235, 23);
+            this.btnBuscar.Location = new System.Drawing.Point(248, 20);
             this.btnBuscar.Name = "btnBuscar";
             this.btnBuscar.Size = new System.Drawing.Size(75, 26);
             this.btnBuscar.TabIndex = 18;
@@ -97,7 +97,6 @@
             this.groupBox1.Controls.Add(this.mskSaldo);
             this.groupBox1.Controls.Add(this.mskCodigoSucursal);
             this.groupBox1.Controls.Add(this.txtNombre);
-            this.groupBox1.Controls.Add(this.btnModificar);
             this.groupBox1.Controls.Add(this.label9);
             this.groupBox1.Controls.Add(this.label8);
             this.groupBox1.Controls.Add(this.label7);
@@ -105,30 +104,30 @@
             this.groupBox1.Controls.Add(this.label5);
             this.groupBox1.Controls.Add(this.label10);
             this.groupBox1.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.groupBox1.Location = new System.Drawing.Point(15, 66);
+            this.groupBox1.Location = new System.Drawing.Point(12, 54);
             this.groupBox1.Name = "groupBox1";
-            this.groupBox1.Size = new System.Drawing.Size(298, 277);
+            this.groupBox1.Size = new System.Drawing.Size(311, 243);
             this.groupBox1.TabIndex = 27;
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "Datos del cliente";
             // 
             // txtCodigoActividad
             // 
-            this.txtCodigoActividad.Location = new System.Drawing.Point(144, 177);
+            this.txtCodigoActividad.Location = new System.Drawing.Point(153, 177);
             this.txtCodigoActividad.Name = "txtCodigoActividad";
             this.txtCodigoActividad.Size = new System.Drawing.Size(144, 21);
             this.txtCodigoActividad.TabIndex = 22;
             // 
             // txtDireccion
             // 
-            this.txtDireccion.Location = new System.Drawing.Point(144, 98);
+            this.txtDireccion.Location = new System.Drawing.Point(153, 98);
             this.txtDireccion.Name = "txtDireccion";
             this.txtDireccion.Size = new System.Drawing.Size(144, 21);
             this.txtDireccion.TabIndex = 21;
             // 
             // mskDni
             // 
-            this.mskDni.Location = new System.Drawing.Point(144, 22);
+            this.mskDni.Location = new System.Drawing.Point(153, 25);
             this.mskDni.Mask = "99999999";
             this.mskDni.Name = "mskDni";
             this.mskDni.Size = new System.Drawing.Size(144, 21);
@@ -137,7 +136,7 @@
             // 
             // mskSaldo
             // 
-            this.mskSaldo.Location = new System.Drawing.Point(143, 212);
+            this.mskSaldo.Location = new System.Drawing.Point(152, 212);
             this.mskSaldo.Mask = "99999999999";
             this.mskSaldo.Name = "mskSaldo";
             this.mskSaldo.Size = new System.Drawing.Size(145, 21);
@@ -145,7 +144,7 @@
             // 
             // mskCodigoSucursal
             // 
-            this.mskCodigoSucursal.Location = new System.Drawing.Point(144, 139);
+            this.mskCodigoSucursal.Location = new System.Drawing.Point(153, 139);
             this.mskCodigoSucursal.Mask = "9";
             this.mskCodigoSucursal.Name = "mskCodigoSucursal";
             this.mskCodigoSucursal.Size = new System.Drawing.Size(144, 21);
@@ -153,7 +152,7 @@
             // 
             // txtNombre
             // 
-            this.txtNombre.Location = new System.Drawing.Point(144, 60);
+            this.txtNombre.Location = new System.Drawing.Point(153, 63);
             this.txtNombre.Name = "txtNombre";
             this.txtNombre.Size = new System.Drawing.Size(144, 21);
             this.txtNombre.TabIndex = 15;
@@ -220,7 +219,7 @@
             // 
             // txtDni
             // 
-            this.txtDni.Location = new System.Drawing.Point(49, 22);
+            this.txtDni.Location = new System.Drawing.Point(83, 20);
             this.txtDni.Name = "txtDni";
             this.txtDni.Size = new System.Drawing.Size(156, 20);
             this.txtDni.TabIndex = 23;
@@ -231,7 +230,6 @@
             this.grpDatosClientes.Controls.Add(this.lblNombre);
             this.grpDatosClientes.Controls.Add(this.label4);
             this.grpDatosClientes.Controls.Add(this.label2);
-            this.grpDatosClientes.Controls.Add(this.btnEliminar);
             this.grpDatosClientes.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.grpDatosClientes.Location = new System.Drawing.Point(15, 360);
             this.grpDatosClientes.Name = "grpDatosClientes";
@@ -280,7 +278,7 @@
             // 
             this.label1.AutoSize = true;
             this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.Location = new System.Drawing.Point(12, 23);
+            this.label1.Location = new System.Drawing.Point(46, 21);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(28, 15);
             this.label1.TabIndex = 21;
@@ -290,15 +288,17 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(324, 502);
+            this.ClientSize = new System.Drawing.Size(333, 341);
             this.Controls.Add(this.groupBox1);
             this.Controls.Add(this.txtDni);
             this.Controls.Add(this.grpDatosClientes);
             this.Controls.Add(this.label1);
+            this.Controls.Add(this.btnEliminar);
             this.Controls.Add(this.btnBuscar);
+            this.Controls.Add(this.btnModificar);
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "frmBuscarSocio";
-            this.Text = "BuscarSocio";
+            this.Text = "Buscar socio";
             this.Load += new System.EventHandler(this.frmBuscarSocio_Load);
             this.groupBox1.ResumeLayout(false);
             this.groupBox1.PerformLayout();
