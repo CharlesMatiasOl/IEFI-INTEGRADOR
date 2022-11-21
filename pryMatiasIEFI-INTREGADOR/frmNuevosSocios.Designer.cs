@@ -92,7 +92,7 @@
             // 
             this.mskDni.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.mskDni.Location = new System.Drawing.Point(136, 67);
-            this.mskDni.Mask = "0000000000";
+            this.mskDni.Mask = "00000000";
             this.mskDni.Name = "mskDni";
             this.mskDni.Size = new System.Drawing.Size(108, 21);
             this.mskDni.TabIndex = 18;

@@ -31,7 +31,7 @@ namespace pryMatiasIEFI_INTREGADOR
                 adaptador.Fill(DS, tabla);
                 combo.DataSource = DS.Tables[tabla];
                 combo.DisplayMember = "Detalle_Sucursal";//es lo que va aparecer en la lista desplegable
-                combo.ValueMember = "Codigo_Sucursal";//esta invisible, pero esta
+                combo.ValueMember = "Codigo_Sucursal";
 
 
                 conexion.Close();

@@ -33,7 +33,7 @@ namespace pryMatiasIEFI_INTREGADOR
 
 
 
-        //propiedas de solo lecturas 
+        //propiedades de lecturas 
         public Int32 Dni_Socio
         {
             get { return dni; }//retorna el valor del dni
@@ -389,11 +389,6 @@ namespace pryMatiasIEFI_INTREGADOR
 
 
         }
-        public Int32 DatosRespuesta()
-        {
-            //StreamReader Lector = new StreamReader();
-
-            return 0;
-        }
+        
     }
 }

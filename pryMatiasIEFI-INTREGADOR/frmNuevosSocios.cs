@@ -31,7 +31,7 @@ namespace pryMatiasIEFI_INTREGADOR
             agregado.Nombre_Apellido = txtNombre.Text;
             agregado.Direccion = txtDireccion.Text;
             agregado.CodigoSucursal = Convert.ToInt32(mskCodigoSucursal.Text);
-            agregado.CodigoActividad = Convert.ToInt32(mskCodigoSucursal.Text);
+            agregado.CodigoActividad = Convert.ToInt32(mskActividad.Text);
             agregado.Saldo = Convert.ToInt32(mskSaldo.Text);
             agregado.RegistroClientes();
         }
