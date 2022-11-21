@@ -87,6 +87,7 @@
             this.mskSaldo.Name = "mskSaldo";
             this.mskSaldo.Size = new System.Drawing.Size(108, 21);
             this.mskSaldo.TabIndex = 23;
+            this.mskSaldo.MaskInputRejected += new System.Windows.Forms.MaskInputRejectedEventHandler(this.mskSaldo_MaskInputRejected);
             // 
             // mskDni
             // 
@@ -96,6 +97,7 @@
             this.mskDni.Name = "mskDni";
             this.mskDni.Size = new System.Drawing.Size(108, 21);
             this.mskDni.TabIndex = 18;
+            this.mskDni.MaskInputRejected += new System.Windows.Forms.MaskInputRejectedEventHandler(this.mskDni_MaskInputRejected);
             // 
             // lblNombreyApellido
             // 
@@ -136,6 +138,7 @@
             this.mskActividad.Size = new System.Drawing.Size(108, 21);
             this.mskActividad.TabIndex = 22;
             this.mskActividad.ValidatingType = typeof(int);
+            this.mskActividad.MaskInputRejected += new System.Windows.Forms.MaskInputRejectedEventHandler(this.mskActividad_MaskInputRejected);
             // 
             // txtNombre
             // 
@@ -144,6 +147,7 @@
             this.txtNombre.Name = "txtNombre";
             this.txtNombre.Size = new System.Drawing.Size(203, 21);
             this.txtNombre.TabIndex = 19;
+            this.txtNombre.TextChanged += new System.EventHandler(this.txtNombre_TextChanged);
             // 
             // lblActividad
             // 
@@ -162,6 +166,7 @@
             this.txtDireccion.Name = "txtDireccion";
             this.txtDireccion.Size = new System.Drawing.Size(108, 21);
             this.txtDireccion.TabIndex = 20;
+            this.txtDireccion.TextChanged += new System.EventHandler(this.txtDireccion_TextChanged);
             // 
             // mskCodigoSucursal
             // 
@@ -172,6 +177,7 @@
             this.mskCodigoSucursal.Size = new System.Drawing.Size(108, 21);
             this.mskCodigoSucursal.TabIndex = 21;
             this.mskCodigoSucursal.ValidatingType = typeof(int);
+            this.mskCodigoSucursal.MaskInputRejected += new System.Windows.Forms.MaskInputRejectedEventHandler(this.mskCodigoSucursal_MaskInputRejected);
             // 
             // lblCodigodeSucursal
             // 
@@ -197,7 +203,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(387, 287);
+            this.ClientSize = new System.Drawing.Size(389, 287);
             this.Controls.Add(this.gpNuevosocio);
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "frmNuevosSocios";

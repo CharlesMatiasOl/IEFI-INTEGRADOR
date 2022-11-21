@@ -24,8 +24,8 @@ namespace pryMatiasIEFI_INTREGADOR
 
         private void btnListar_Click(object sender, EventArgs e)
         {
-            clsSocio listar = new clsSocio();
-            listar.Listar(dgvListadoSocios);
+            clsSocio listar = new clsSocio(); // variable 
+            listar.Listar(dgvListadoSocios); 
         }
     }
 }

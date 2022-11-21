@@ -81,14 +81,13 @@ namespace pryMatiasIEFI_INTREGADOR
             set { codActividad = value; }
         }
 
-        //metodos con los que trabajaremos
-        public void Listar(DataGridView dgvGrilla) //intentando 
+        //metodos con los que Utilizamos 
+        public void Listar(DataGridView dgvGrilla) 
         {
             try
             {
                 conexion.ConnectionString = cadenaConexion;//cadena de conexion
                 conexion.Open();
-
                 comando.Connection = conexion; //el comando necesita tener una conexion
                 comando.CommandType = CommandType.TableDirect; //nos trae una tabla
                 comando.CommandText = tabla;
@@ -155,7 +154,6 @@ namespace pryMatiasIEFI_INTREGADOR
             {
                 conexion.ConnectionString = cadenaConexion; //configuracion de la conexion
                 conexion.Open();
-
                 comando.Connection = conexion;
                 comando.CommandType = CommandType.TableDirect; //comando para traer la tabla
                 comando.CommandText = tabla;
@@ -164,12 +162,12 @@ namespace pryMatiasIEFI_INTREGADOR
                 dgvGrilla.Rows.Clear();
                 cantidad = 0;
                 saldo = 0;
-                while (DR.Read())
+                while (DR.Read()) // recorre la base de datos y si esta todo bien 
                 {
                     if (DR.GetDecimal(5) > 0)
                     {
 
-                        dgvGrilla.Rows.Add(DR.GetInt32(0), DR.GetString(1), DR.GetDecimal(5));
+                        dgvGrilla.Rows.Add(DR.GetInt32(0), DR.GetString(1), DR.GetDecimal(5)); // aca lo agrega los datos en la grilla
                         cantidad++;
                         saldo = saldo + DR.GetDecimal(5);
 
@@ -189,6 +187,7 @@ namespace pryMatiasIEFI_INTREGADOR
         {
             try
             {
+                // Comando para inserir datos 
                 String Sql = "";
                 Sql = "INSERT INTO Socio (Dni_Socio,Nombre_Apellido,Direccion,Codigo_Sucursal,Codigo_Actividad,Saldo)";
                 Sql = Sql + " VALUES (" + Dni_Socio + ",'" + Nombre_Apellido + "','" + Direccion + "'," + CodigoSucursal + "," + CodigoActividad + "," + Saldo + ")";

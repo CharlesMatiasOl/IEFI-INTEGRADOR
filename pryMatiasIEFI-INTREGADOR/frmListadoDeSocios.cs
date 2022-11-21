@@ -19,8 +19,8 @@ namespace pryMatiasIEFI_INTREGADOR
 
         private void btnListar_Click(object sender, EventArgs e)
         {
-            clsSocio objCliente = new clsSocio();
-            objCliente.ListarSocios(dgvGrilla);
+            clsSocio objCliente = new clsSocio();//Variable que utilizamos 
+            objCliente.ListarSocios(dgvGrilla); // Nombre de la grilla que utilizamos 
             lblTotalSueldos.Text = objCliente.TotalSaldo.ToString();
             lblPersonasInscr.Text = objCliente.cantidadSocios.ToString();
             lblPromedioSaldos.Text = objCliente.promedioSaldo.ToString();
