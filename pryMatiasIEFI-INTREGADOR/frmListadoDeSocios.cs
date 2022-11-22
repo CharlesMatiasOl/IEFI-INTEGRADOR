@@ -22,7 +22,7 @@ namespace pryMatiasIEFI_INTREGADOR
             clsSocio objCliente = new clsSocio();//Variable que utilizamos 
             objCliente.ListarSocios(dgvGrilla); // Nombre de la grilla que utilizamos 
             lblTotalSueldos.Text = objCliente.TotalSaldo.ToString();
-            lblPersonasInscr.Text = objCliente.cantidadSocios.ToString();
+            lblInscripciones.Text = objCliente.cantidadSocios.ToString();
             lblPromedioSaldos.Text = objCliente.promedioSaldo.ToString();
         }
 

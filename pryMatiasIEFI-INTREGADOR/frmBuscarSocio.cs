@@ -33,8 +33,7 @@ namespace pryMatiasIEFI_INTREGADOR
             if (DniCliente !=0)
             {
                 
-                lblNombre.Text = objCliente.Nombre_Apellido;
-                lblSaldo.Text = objCliente.Saldo.ToString();
+               
                 txtNombre.Text = objCliente.Nombre_Apellido;
                 mskDni.Text = objCliente.Dni_Socio.ToString();
                 txtDireccion.Text = objCliente.Direccion;

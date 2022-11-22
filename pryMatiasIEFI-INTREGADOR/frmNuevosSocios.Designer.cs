@@ -83,7 +83,6 @@
             // 
             this.mskSaldo.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.mskSaldo.Location = new System.Drawing.Point(136, 231);
-            this.mskSaldo.Mask = "0000000000";
             this.mskSaldo.Name = "mskSaldo";
             this.mskSaldo.Size = new System.Drawing.Size(108, 21);
             this.mskSaldo.TabIndex = 23;
@@ -133,7 +132,6 @@
             // 
             this.mskActividad.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.mskActividad.Location = new System.Drawing.Point(136, 190);
-            this.mskActividad.Mask = "0";
             this.mskActividad.Name = "mskActividad";
             this.mskActividad.Size = new System.Drawing.Size(108, 21);
             this.mskActividad.TabIndex = 22;
@@ -172,7 +170,6 @@
             // 
             this.mskCodigoSucursal.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.mskCodigoSucursal.Location = new System.Drawing.Point(136, 149);
-            this.mskCodigoSucursal.Mask = "0";
             this.mskCodigoSucursal.Name = "mskCodigoSucursal";
             this.mskCodigoSucursal.Size = new System.Drawing.Size(108, 21);
             this.mskCodigoSucursal.TabIndex = 21;
