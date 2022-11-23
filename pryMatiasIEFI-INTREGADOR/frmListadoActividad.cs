@@ -27,7 +27,7 @@ namespace pryMatiasIEFI_INTREGADOR
         {
             Int32 filtro = (Convert.ToInt32(lstActividades.SelectedValue));
             clsSocio filtrar = new clsSocio();
-            filtrar.FiltrarClientesDeUnaActividad(dgvListadoActividad, filtro);
+            filtrar.FiltrarClientesDeUnaActividad(dgvListadoActividad, filtro);//Comando que llama el clase
         }
 
        

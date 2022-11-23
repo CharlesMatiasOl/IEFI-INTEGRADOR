@@ -60,7 +60,7 @@ namespace pryMatiasIEFI_INTREGADOR
                 {
                     while (Lector.Read())//leemos
                     {
-                        if (Lector.GetInt32(3) == Sucursal)// y si esta todo bien pone los datos 
+                        if (Lector.GetInt32(3) == Sucursal)// y si esta todo bien pone los datos en la grilla
                         {
                             Grilla.Rows.Add(Lector.GetInt32(0), Lector.GetString(1), Lector.GetString(2), Lector.GetDecimal(5));
                         }

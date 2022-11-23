@@ -86,7 +86,7 @@ namespace pryMatiasIEFI_INTREGADOR
 
                 while (Lectora.Read())
                 {
-                    NombreActividad = Lectora[1].ToString();
+                    NombreActividad = Lectora[1].ToString(); // lo lee y carga en la grilla 
                 }
 
                 conexion.Close();

@@ -81,7 +81,8 @@ namespace pryMatiasIEFI_INTREGADOR
             set { codActividad = value; }
         }
 
-        //metodos con los que Utilizamos 
+        //Funciones
+
         public void Listar(DataGridView dgvGrilla) 
         {
             try
@@ -125,7 +126,7 @@ namespace pryMatiasIEFI_INTREGADOR
                 {
                     while (DR.Read()) //mientras haya datos
                     {
-                        if (DR.GetInt32(0) == Dni_Socio) //comparamos con lo escrito
+                        if (DR.GetInt32(0) == Dni_Socio) //comparamos con lo escrito 
                         {
                             dni = DR.GetInt32(0);
                             nombre = DR.GetString(1);
@@ -230,7 +231,7 @@ namespace pryMatiasIEFI_INTREGADOR
         {
             try
             {
-                String Sql = "UPDATE Socio SET " +//Comando para modificar en la base de datos 
+                String Sql = "UPDATE Socio SET " +//Comando para modificar en la tabla
                     "[Dni_Socio] = " + Dni_Socio + ", " +
                     "[Nombre_Apellido] = '" + Nombre_Apellido + "', " +
                     "[Direccion] = '" + Direccion + "', " +
