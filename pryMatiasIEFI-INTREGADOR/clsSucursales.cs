@@ -27,10 +27,10 @@ namespace pryMatiasIEFI_INTREGADOR
                 comando.CommandType = CommandType.TableDirect; //nos trae una tabla
                 comando.CommandText = tabla;
                 adaptador = new OleDbDataAdapter(comando);
-                DataSet DS = new DataSet();//tabla en memoria ram que tiene datos de mi tabla
+                DataSet DS = new DataSet();//tabla en memoria ram 
                 adaptador.Fill(DS, tabla);
                 combo.DataSource = DS.Tables[tabla];
-                combo.DisplayMember = "Detalle_Sucursal";//es lo que va aparecer en la lista desplegable
+                combo.DisplayMember = "Detalle_Sucursal";//es lo que va aparecer en la lista 
                 combo.ValueMember = "Codigo_Sucursal";
 
 
@@ -60,7 +60,7 @@ namespace pryMatiasIEFI_INTREGADOR
                 {
                     while (Lector.Read())//leemos
                     {
-                        if (Lector.GetInt32(3) == Sucursal)
+                        if (Lector.GetInt32(3) == Sucursal)// y si esta todo bien pone los datos 
                         {
                             Grilla.Rows.Add(Lector.GetInt32(0), Lector.GetString(1), Lector.GetString(2), Lector.GetDecimal(5));
                         }

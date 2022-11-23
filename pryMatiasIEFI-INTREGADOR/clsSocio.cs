@@ -15,7 +15,7 @@ namespace pryMatiasIEFI_INTREGADOR
     internal class clsSocio
     {
         private OleDbConnection conexion = new OleDbConnection();
-        private OleDbCommand comando = new OleDbCommand();//enviamos ordenes a las bases de dapto
+        private OleDbCommand comando = new OleDbCommand();//enviamos ordenes a las bases de dato
         private OleDbDataAdapter adaptador = new OleDbDataAdapter();//adpatamos los datos que estan en la base a datos comprensibles por .NET
 
         private string cadenaConexion = "Provider=Microsoft.ACE.OLEDB.12.0;Data Source=IEFIBD.mdb";
@@ -36,12 +36,12 @@ namespace pryMatiasIEFI_INTREGADOR
         //propiedades de lecturas 
         public Int32 Dni_Socio
         {
-            get { return dni; }//retorna el valor del dni
+            get { return dni; }
             set { dni = value; }
         }
         public string Nombre_Apellido
         {
-            get { return nombre; }//retorna el valor del nombre
+            get { return nombre; }
             set { nombre = value; }
         }
         public decimal Saldo
@@ -67,7 +67,7 @@ namespace pryMatiasIEFI_INTREGADOR
         }
         public string Direccion
         {
-            get { return direccion; }//retorna el valor del nombre
+            get { return direccion; }
             set { direccion = value; }
         }
         public Int32 CodigoSucursal
@@ -88,12 +88,12 @@ namespace pryMatiasIEFI_INTREGADOR
             {
                 conexion.ConnectionString = cadenaConexion;//cadena de conexion
                 conexion.Open();
-                comando.Connection = conexion; //el comando necesita tener una conexion
-                comando.CommandType = CommandType.TableDirect; //nos trae una tabla
+                comando.Connection = conexion; 
+                comando.CommandType = CommandType.TableDirect; 
                 comando.CommandText = tabla;
 
                 adaptador = new OleDbDataAdapter(comando);
-                DataSet DS = new DataSet();//tabla en memoria ram que tiene datos de mi tabla
+                DataSet DS = new DataSet();
                 adaptador.Fill(DS);
 
                 dgvGrilla.DataSource = DS.Tables[0];
@@ -115,19 +115,17 @@ namespace pryMatiasIEFI_INTREGADOR
             {
                 conexion.ConnectionString = cadenaConexion; //configuracion de la conexion
                 conexion.Open();
-
                 comando.Connection = conexion;
                 comando.CommandType = CommandType.TableDirect; //comando para traer la tabla
                 comando.CommandText = "Socio";
 
 
-
-                OleDbDataReader DR = comando.ExecuteReader(); //recibe lo que tiene la tabla y el comando ejecuta
-                if (DR.HasRows) //preguntamos si hay filas
+                OleDbDataReader DR = comando.ExecuteReader(); //recibe lo que tiene la tabla y ejecuta
+                if (DR.HasRows) 
                 {
                     while (DR.Read()) //mientras haya datos
                     {
-                        if (DR.GetInt32(0) == Dni_Socio) //comparamos con lo ingresado 
+                        if (DR.GetInt32(0) == Dni_Socio) //comparamos con lo escrito
                         {
                             dni = DR.GetInt32(0);
                             nombre = DR.GetString(1);
@@ -158,7 +156,7 @@ namespace pryMatiasIEFI_INTREGADOR
                 comando.CommandType = CommandType.TableDirect; //comando para traer la tabla
                 comando.CommandText = tabla;
 
-                OleDbDataReader DR = comando.ExecuteReader();
+                OleDbDataReader DR = comando.ExecuteReader(); //recibe y ejecuta
                 dgvGrilla.Rows.Clear();
                 cantidad = 0;
                 saldo = 0;
@@ -198,7 +196,7 @@ namespace pryMatiasIEFI_INTREGADOR
                 comando.CommandText = Sql;
                 comando.ExecuteNonQuery();
                 conexion.Close();
-                MessageBox.Show("Tu socio pudo ser registrado con EXITO!!");
+                MessageBox.Show("Tu socio pudo ser registrado!!");
             }
             catch (Exception)
             {
@@ -221,7 +219,7 @@ namespace pryMatiasIEFI_INTREGADOR
                 comando.CommandText = Sql;
                 comando.ExecuteNonQuery();
                 conexion.Close();
-                MessageBox.Show("Tu socio pudo ser eliminado con EXITO!!");
+                MessageBox.Show("Tu socio pudo ser eliminado!!");
             }
             catch (Exception)
             {
@@ -232,7 +230,7 @@ namespace pryMatiasIEFI_INTREGADOR
         {
             try
             {
-                String Sql = "UPDATE Socio SET " +
+                String Sql = "UPDATE Socio SET " +//Comando para modificar en la base de datos 
                     "[Dni_Socio] = " + Dni_Socio + ", " +
                     "[Nombre_Apellido] = '" + Nombre_Apellido + "', " +
                     "[Direccion] = '" + Direccion + "', " +
@@ -248,7 +246,7 @@ namespace pryMatiasIEFI_INTREGADOR
                 comando.CommandText = Sql;
                 comando.ExecuteNonQuery();
                 conexion.Close();
-                MessageBox.Show("Tu socio pudo ser modificado con EXITO!!");
+                MessageBox.Show("Tu socio pudo ser modificado!!");
             }
             catch (Exception)
             {
@@ -270,9 +268,9 @@ namespace pryMatiasIEFI_INTREGADOR
                 Grilla.Rows.Clear();
                 if (Lector.HasRows)// si hay filas se lee
                 {
-                    while (Lector.Read())//leemos
+                    while (Lector.Read())// lo filtramos para que aparezca el dato correcto
                     {
-                        if (Lector.GetInt32(4) == Actividad)
+                        if (Lector.GetInt32(4) == Actividad) // y depues agrega el dato 
                         {
                             Grilla.Rows.Add(Lector.GetInt32(0), Lector.GetString(1), Lector.GetString(2), Lector.GetDecimal(5));
 

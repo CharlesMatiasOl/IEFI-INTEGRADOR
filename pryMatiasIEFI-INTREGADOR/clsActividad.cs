@@ -57,7 +57,7 @@ namespace pryMatiasIEFI_INTREGADOR
                 DataSet DS = new DataSet();//tabla en memoria ram 
                 adaptador.Fill(DS, tabla);
                 combo.DataSource = DS.Tables[tabla];
-                combo.DisplayMember = "Detalle_Actividad";//es lo que va aparecer en la lista desplegable
+                combo.DisplayMember = "Detalle_Actividad";//es lo que va aparecer en la lista 
                 combo.ValueMember = "Codigo_Actividad";
 
 
@@ -81,7 +81,7 @@ namespace pryMatiasIEFI_INTREGADOR
                 conexion.Open();               
                 comando.Connection = conexion;               
                 comando.CommandType = CommandType.Text;             
-                comando.CommandText = "SELECT * FROM Actividad WHERE Codigo_Actividad =" + codigo;//Indico Nombre de la tabla a travez de la variable tabla creada                             
+                comando.CommandText = "SELECT * FROM Actividad WHERE Codigo_Actividad =" + codigo;//Indico Nombre de la tabla                            
                 Lectora = comando.ExecuteReader();//le paso a adaptador el comando 
 
                 while (Lectora.Read())

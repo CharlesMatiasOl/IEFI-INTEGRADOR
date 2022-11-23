@@ -34,7 +34,7 @@ namespace pryMatiasIEFI_INTREGADOR
             {
                 
                
-                txtNombre.Text = objCliente.Nombre_Apellido;
+                txtNombre.Text = objCliente.Nombre_Apellido; //Comando que utilizamos para llamar los datos 
                 mskDni.Text = objCliente.Dni_Socio.ToString();
                 txtDireccion.Text = objCliente.Direccion;
                 ObjActividad.BuscarActivid(objCliente.CodigoActividad);
